@@ -6,7 +6,8 @@ project(MyProject)
 find_program(CPPCHECK_EXECUTABLE NAMES cppcheck)
 if(CPPCHECK_EXECUTABLE)
     # 设置Cppcheck的参数
-    set(CPPCHECK_PARAMS "--enable=all" "--error-exitcode=10")
+    #set(CPPCHECK_PARAMS "--enable=all" "--error-exitcode=10")
+    set(CPPCHECK_PARAMS "--addon=misra" "--error-exitcode=10")
 
     # 在构建时运行Cppcheck
     add_custom_target(
