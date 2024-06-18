@@ -17,6 +17,8 @@ if(CPPCHECK_EXECUTABLE)
     )
 endif()
 
+include_directories(inc)
+
 # 添加您的源文件
 add_executable(my_executable src/main.cpp)
 
